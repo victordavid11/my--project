@@ -48,7 +48,7 @@ const ConfirmOrderModal = ({ show, handleClose, cart, clearCart }) => {
     try {
       // Replace with your actual backend URL
       const token = localStorage.getItem("token");
-      const response = await axios.post("http://localhost:5000/api/orders", orderData, {
+      const response = await axios.post("https://my-project-mubw.onrender.com", orderData, {
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`
