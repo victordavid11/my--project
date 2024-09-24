@@ -275,7 +275,7 @@ align-content: center;
 
   @media only screen and (max-width: 480px){
 .pbtn{
-  margin-left: 20rem;
+  margin-left: 15rem;
   align-items: start;
  align-content: start;
  justify-content: start;
