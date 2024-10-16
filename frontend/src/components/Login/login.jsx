@@ -36,34 +36,49 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container" style={{ maxWidth: '400px', margin: 'auto', padding: '20px' }}>
+    <div
+      className="login-container"
+      style={{ maxWidth: "400px", margin: "auto", padding: "20px" }}
+    >
       <h2>Login</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
       <form onSubmit={onSubmit}>
-        <div className="form-group" style={{ marginBottom: '10px' }}>
+        <div className="form-group" style={{ marginBottom: "10px" }}>
           <label>Email:</label>
-          <input 
-            type="email" 
-            name="email" 
-            value={email} 
-            onChange={onChange} 
-            required 
-            className="form-control" 
+          <input
+            type="email"
+            name="email"
+            value={email}
+            onChange={onChange}
+            required
+            className="form-control"
           />
         </div>
-        <div className="form-group" style={{ marginBottom: '10px' }}>
+        <div className="form-group" style={{ marginBottom: "10px" }}>
           <label>Password:</label>
-          <input 
-            type="password" 
-            name="password" 
-            value={password} 
-            onChange={onChange} 
-            required 
-            className="form-control" 
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={onChange}
+            required
+            className="form-control"
           />
         </div>
-        <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>Login</button>
+        <button
+          type="submit"
+          className="btn btn-primary"
+          style={{ width: "100%" }}
+        >
+          Login
+        </button>
       </form>
+      <p style={{ display: "flex", gap: 10 }}>
+        Do not have an account?{" "}
+        <span>
+          <button onClick={() => navigate("/signup")}>Sign in </button>
+        </span>{" "}
+      </p>
     </div>
   );
 };
